@@ -8,6 +8,7 @@ Django==5.0.6
 django-admin-thumbnails==0.2.9
 django-crispy-forms==2.1
 django-decouple==2.1
+django-environ==0.11.2
 django-sass-processor==1.4
 django-storages==1.14.3
 gunicorn==22.0.0
@@ -15,6 +16,7 @@ idna==3.7
 jmespath==1.0.1
 packaging==24.0
 pillow==10.3.0
+psycopg2==2.9.9
 psycopg2-binary==2.9.9
 python-dateutil==2.9.0.post0
 requests==2.32.2
