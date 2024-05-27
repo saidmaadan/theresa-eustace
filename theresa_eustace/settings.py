@@ -29,9 +29,9 @@ SECRET_KEY = config('SECRET_KEY')
 # DEBUG = True
 DEBUG = config('DEBUG', default=False, cast=bool)
 ALLOWED_HOSTS = ["www.theresaeustace.com",
-                 "http://www.theresaeustace.com", "https://www.theresaeustace.com", "theresaeustace.com", "https://theresa-eustace.up.railway.app", "0.0.0.0", "localhost", "*"]
+                 "http://www.theresaeustace.com", "https://www.theresaeustace.com", "theresaeustace.com", "https://theresaeustace.up.railway.app", "0.0.0.0", "localhost", "*"]
 
-CSRF_TRUSTED_ORIGINS = ['https://theresa-eustace.up.railway.app',
+CSRF_TRUSTED_ORIGINS = ['https://theresaeustace.up.railway.app',
                         'https://theresaeustace.com', 'https://www.theresaeustace.com']
 
 
@@ -100,7 +100,7 @@ DATABASES = {
         'USER': config('USER'),
         'PASSWORD': config('PASSWORD'),
         'HOST': config('HOST'),
-        # 'PORT': config('PORT'),
+        'PORT': config('PORT'),
     }
 }
 
