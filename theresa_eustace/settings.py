@@ -26,8 +26,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = config('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
-#DEBUG = config('DEBUG', default=False, cast=bool)
+#DEBUG = True
+DEBUG = config('DEBUG', default=False, cast=bool)
 ALLOWED_HOSTS = ["www.theresaeustace.com",
                  "http://www.theresaeustace.com", "https://www.theresaeustace.com", "theresaeustace.com", "https://theresa-eustace.up.railway.app", "0.0.0.0", "localhost", "*"]
 
@@ -112,8 +112,8 @@ DATABASES = {
 }
 
 # # if os.environ.get('DJANGO_PRODUCTION'):
-# DATABASES = {'default': dj_database_url.config(
-#     default='postgres://postgres:config(PASSWORD)@localhost/config(NAME)')}
+DATABASES = {'default': dj_database_url.config(
+    default='postgres://postgres:config(PASSWORD)@localhost/config(NAME)')}
 
 
 # Password validation
