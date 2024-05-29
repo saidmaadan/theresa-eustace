@@ -28,5 +28,5 @@ urlpatterns = [
     path('resources/', include('resources.urls')),
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
-handler404 = 'myproject.views.custom_404'
-handler500 = 'myproject.views.custom_500'
+handler404 = 'theresa_eustace.views.custom_404'
+handler500 = 'theresa_eustace.views.custom_500'
