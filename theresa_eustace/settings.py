@@ -47,6 +47,11 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'sass_processor',
     'accounts',
+    'category',
+    'blog',
+    'collection',
+    'book',
+    'resources',
     'storages',
 ]
 
@@ -74,6 +79,8 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'category.context_processors.category_menu_links',
+                'collection.context_processors.collection_menu_links',
             ],
         },
     },

@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect
-
+from blog.models import Post
+from book.models import Book
 from django.core.mail import send_mail
 from django.core.mail import EmailMessage
 from django.template.loader import render_to_string
@@ -10,25 +11,38 @@ from django.http import HttpResponse
 # Create your views here.
 
 def home(request):
-    
-    return render(request, 'pages/home.html')
+    posts = Post.objects.all().order_by('-date')[:6]
+    books = Book.objects.all().filter(is_available=True).order_by('-created_date')[:20]
+    books_ = Book.objects.all().filter(is_new_released=True).order_by('-created_date')[:1]
+    context = {
+        'posts': posts,
+        'books': books,
+        'books_': books_,
+    }
+    return render(request, 'pages/home.html', context)
 
 def about(request):
-    
-    return render(request, 'pages/about.html')
+    posts = Post.objects.all().order_by('-date')[:6]
+    context = {
+        'posts': posts,
+    }
+    return render(request, 'pages/about.html', context)
 
 
 def disclaimer(request):
-    
-    return render(request, 'pages/disclaimer.html')
+    context = {}
+    return render(request, 'pages/disclaimer.html', context)
 
 def privacy(request):
-    
-    return render(request, 'pages/privacy.html')
+    context = {}
+    return render(request, 'pages/privacy.html', context)
 
 def terms(request):
-    
-    return render(request, 'pages/terms.html')
+    posts = Post.objects.all().order_by('-date')[:6]
+    context = {
+        'posts': posts,
+    }
+    return render(request, 'pages/terms.html', context)
 
 def contact(request):
     
@@ -51,13 +65,10 @@ def contact(request):
     return render(request, 'pages/contact.html')
 
 def thankyou(request):
-    
-    return render(request, 'pages/thankyou.html')
+    context = {}
+    return render(request, 'pages/thankyou.html', context)
 
 def already_subscribed(request):
-    
-    return render(request, 'pages/already-subscribed.html')
+    context = {}
+    return render(request, 'pages/already-subscribed.html', context)
 
-
-
-# Create your views here.

@@ -46,10 +46,10 @@
                       <ul>
                         
                         <li><a href="{% url 'home' %}">Home</a></li>
-                        <li><a href="{% url 'home' %}">About</a></li>
-                        <li><a href="{% url 'home' %}">Books</a></li>
-                        <li><a href="{% url 'home' %}">Resources</a></li>
-                        <li><a href="{% url 'home' %}">Contact</a></li>
+                        <li><a href="{% url 'about' %}">About</a></li>
+                        <li><a href="{% url 'book' %}">Books</a></li>
+                        <li><a href="{% url 'tips-page' %}">Resources</a></li>
+                        <li><a href="{% url 'contact' %}">Contact</a></li>
                         <li><a href="{% url 'terms' %}">Terms </a></li>
                         <li><a href="{% url 'privacy' %}">Privacy Policy</a></li>
                       </ul>
@@ -57,7 +57,17 @@
                 </div>
               </div>
               <div class="col-lg-3 col-md-4 col-sm-6 col-6 mb-10 pt-40 ">
-                
+                <div class="single-widget">
+                  <h3 class="widget-title">Insight</h3>
+                    <div class="footer-widget-menu">
+                      <ul>
+                        <li><a href="{% url 'posts' %}">Trends</a></li>
+                        {% for category in category_links %}
+                          <li ><a href="{{ category.get_url }}">{{ category.category_name }}</a></li>
+                        {% endfor %}
+                      </ul>
+                    </div>
+                </div>
               </div>
               <div class="col-lg-6 col-md-5 col-sm-12 mb-10 pt-40 ">
                 <div class="single-widget">
