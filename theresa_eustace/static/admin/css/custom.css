@@ -24,3 +24,7 @@ div.breadcrumbs{
     background-color: #928bdc;
     color: #fff;
 }
+
+.button, input[type=submit], input[type=button], .submit-row input, a.button {
+   background-color: #6861bc; 
+}
