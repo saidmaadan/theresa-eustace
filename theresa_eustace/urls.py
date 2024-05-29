@@ -27,3 +27,6 @@ urlpatterns = [
     path('books/', include('book.urls')),
     path('resources/', include('resources.urls')),
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
+handler404 = 'myproject.views.custom_404'
+handler500 = 'myproject.views.custom_500'
