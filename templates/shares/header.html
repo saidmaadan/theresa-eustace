@@ -92,20 +92,20 @@
               <ul class="menu-content">
                 <li class="menu-item-has-children active"><a href="{% url 'home' %}">Home</a></li>
                 <li><a href="{% url 'about' %}">About</a></li>
-                {% for category in links %}
-                    {% if category.category_name == "Business" %}
-                        <li><a href="{{ category.get_url }}">{{ category.category_name }}</a></li>
-                    {% endif %}
-                {% endfor %}
-                {% for category in links %}
-                    {% if category.category_name == "Finance" %}
-                        <li><a href="{{ category.get_url }}">{{ category.category_name }}</a></li>
-                    {% endif %}
-                {% endfor %}
+                <li class="menu-item-has-children"><a href="{% url 'book' %}">Books Store</a>
+                    <ul class="sub-menu">
+                      
+                      {% for collection in collection_links %}
+                          <li><a href="{{ collection.get_url }}">{{ collection.collection_name }}</a></li>
+                      {% endfor %}
+                     
+                    </ul>
+                </li>
+                
                 <li class="menu-item-has-children"><a href="{% url 'posts' %}">Insight</a>
                   <ul class="sub-menu">
                     <li><a href="{% url 'posts' %}">Blog</a></li>
-                    {% for category in links %}
+                    {% for category in category_links %}
                         <li><a href="{{ category.get_url }}">{{ category.category_name }}</a></li>
                     {% endfor %}
                    
