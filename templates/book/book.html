@@ -34,8 +34,9 @@
                     <a class="button button-style-3" href="{{ book.amazon_url }}" target=_blank>Buy Now <i class="fas fa-arrow-right"></i></a>
                   </div>
                   <a href="{{ book.get_url }}">
-                  <h3 class="mt-20 mb-10 " style="font-size: 18px;"><span class="pr-10">{{ book.title }}</span>{{ book.sub_title }}</h3></a>
-                
+                  <h3 class="mt-20 mb-10 " style="font-size: 16px;"><span class="pr-10">{{ book.title }}</span></h3></a>
+                  <h3 class="mt-10 mb-10 " style="font-size: 16px;"><span class="pr-10">{{ book.sub_title }}</h3>
+                  
               
                   <p>{{ book.description|truncatechars:100 | safe }}</p>
                 </div>
