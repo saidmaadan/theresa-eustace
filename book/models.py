@@ -8,10 +8,10 @@ from accounts.models import Account
 
 class Book(models.Model):
     title           = models.CharField(max_length=300, unique=True)
-    sub_title       = models.CharField(max_length=400, blank=True, null=True)
+    sub_title       = models.CharField(max_length=500, blank=True, null=True)
     slug            = models.SlugField(max_length=300, unique=True)
   # description     = CKEditor5Field('Text', config_name='extends')
-    description     = models.TextField(max_length=1000, blank=True, null=True)
+    description     = models.TextField(blank=True, null=True)
     price           = models.CharField(blank=True, null=True)
     
     discount        = models.IntegerField(blank=True, null=True)
