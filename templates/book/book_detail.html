@@ -12,6 +12,8 @@
           <div class="generating-icon" >
             {% if single_book.images %}
               <img class="ms-auto " style="width: 250px; height: 250px; object-fit: cover;" src="{{ single_book.images.url }}" alt="" >
+            {% elif single_book.image_url %}
+              <img class="ms-auto " style="width: 250px; height: 250px; object-fit: cover;" src="{{ single_book.images.url }}" alt="" >
             {% else %}
               <img class="ms-auto img-fluid" style="width: 296px; height: 296px; object-fit: cover;" src="https://sophiabent.s3.us-west-2.amazonaws.com/media/photos/book/SB-The_Pregnancy_Pact-BOOK.png" alt="{{ single_book.title }}">
             {% endif %}

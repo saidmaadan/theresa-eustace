@@ -16,6 +16,7 @@ class Book(models.Model):
     
     discount        = models.IntegerField(blank=True, null=True)
     images          = models.ImageField(upload_to='photos/book', blank=True, null=True)
+    image_url       = models.CharField(blank=True, null=True)
     stock           = models.IntegerField(blank=True, null=True)
     is_available    = models.BooleanField(default=True)
     is_feature      = models.BooleanField(default=False)

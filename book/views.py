@@ -61,7 +61,7 @@ def book_detail(request, collection_slug, book_slug):
     
     context = {
         'single_book': single_book,
-        "single_book_tags": single_book.tags.all(),
+        
         'book_gallery': book_gallery,
         "book_gallery_": book_gallery_,
 

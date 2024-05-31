@@ -59,7 +59,9 @@
           <div class="team-member-img">
             {% if book.images %}
               <img class="img" src="{{ book.images.url }}" alt="image" style="min-height: 280px; max-height: 280px; background-size; cover; ">
-              {% else %}
+            {% elif book.image_url %}
+              <img class="img" src="{{ book.image_url }}" alt="image" style="min-height: 280px; max-height: 280px; background-size; cover; ">
+            {% else %}
               <img class="" src="https://sophiabent.s3.us-west-2.amazonaws.com/media/photos/book/SB-The_Pregnancy_Pact-BOOK.png" alt="{{ book.title }}">
             {% endif %}
           </div>
@@ -72,7 +74,7 @@
           <div class="team-member-content-box2 text-center pb-10">
             <div class="team-member-content mb-20">
               <div class="about-us-button">
-                <a class="button button-style-3" href="{{ book.amazon_url }}">Buy Now <i class="fas fa-arrow-right"></i></a>
+                <a class="button button-style-3" href="{{ book.amazon_url }}" target=_blank>Buy Now <i class="fas fa-arrow-right"></i></a>
                </div>
                <a href="{{ book.get_url }}">
                 <h3 class="mt-20 mb-10 " style="font-size: 18px;"><span class="pr-10">{{ book.title }}</span>{{ book.sub_title }}</h3></a>

@@ -77,7 +77,7 @@ class SinglePostView(View):
         context = {
             "posts": posts,
             "post": post,
-            "post_tags": post.tags.all(),
+           
             "comment_form": CommentForm(),
             "comments": post.comments.all().order_by("-id"),
             "saved_for_later": self.is_stored_post(request, post.id),
