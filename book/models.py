@@ -12,11 +12,11 @@ class Book(models.Model):
     slug            = models.SlugField(max_length=300, unique=True)
   # description     = CKEditor5Field('Text', config_name='extends')
     description     = models.TextField(blank=True, null=True)
-    price           = models.CharField(blank=True, null=True)
+    price           = models.CharField(max_length=20, blank=True, null=True)
     
     discount        = models.IntegerField(blank=True, null=True)
     images          = models.ImageField(upload_to='photos/book', blank=True, null=True)
-    image_url       = models.CharField(blank=True, null=True)
+    image_url       = models.CharField(max_length=400, blank=True, null=True)
     stock           = models.IntegerField(blank=True, null=True)
     is_available    = models.BooleanField(default=True)
     is_feature      = models.BooleanField(default=False)
